@@ -194,7 +194,7 @@ NAV {
 .about--intro {
     font-size: 28px;
     line-height: 33px;
-    text-align: center;
+    text-align: left;
 }
 .about--content {
     margin-top: 46px;
