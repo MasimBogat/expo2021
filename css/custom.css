@@ -56,7 +56,7 @@ HEADER {
     display: flex;
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: 4;
     box-shadow: 0 1px 10px 0 #0003;
 }
 NAV {
@@ -143,10 +143,24 @@ NAV {
 .section#banner * {
     color: #fff !important;
 }
+.section#banner .container {
+    position: relative;
+    z-index: 3;
+}
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
 .section#banner .logo-expo {
     position: absolute;
     top: 36px;
     left: 36px;
+    z-index: 2;
 }
 .section#banner::before {
     content: "";
@@ -156,6 +170,7 @@ NAV {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.45);
+    z-index: 2;
 }
 .section#banner H1 {
     font-size: 90px;
@@ -268,6 +283,9 @@ NAV {
     box-shadow: 0 9px 15px 0 rgba(0,0,0,0.35);
     cursor: pointer;
     height: 256px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .expo--cardimage IMG {
     position: absolute;
@@ -275,6 +293,7 @@ NAV {
     bottom: 0;
     width: 100%;
     height: auto;
+    display: none;
 }
 .expo--cardimage:hover .expo--cardtext{
     opacity: 1;
