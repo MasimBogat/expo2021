@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $('.expo--cardimage').each(function(){
+        console.log($(this).find('IMG'))
+        $(this).css('background-image', 'url("' + $(this).find('IMG').attr('src') + '"');
+    });
     $('.news.owl-carousel').owlCarousel({
         nav: false,
         navText: ["<i class='prev'><</i>","<i class='next'>></i>"],
