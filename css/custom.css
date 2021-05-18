@@ -194,7 +194,7 @@ NAV {
 .about--intro {
     font-size: 28px;
     line-height: 33px;
-    text-align: center;
+    text-align: left;
 }
 .about--content {
     margin-top: 46px;
@@ -408,7 +408,7 @@ NAV {
 .vacation--wrapp {
     border-radius: 40px;
     background-color: #2e394a;
-    padding: 40px 12px 46px;
+    padding: 40px 12px 86px;
     box-shadow: 0 9px 15px 0 rgb(0 0 0 / 35%);
     overflow: hidden;
     position: relative;
@@ -455,7 +455,7 @@ NAV {
     height: 1px;
     background-color: #fff;
 }
-.vacation-tablink[href="#tab9"]::before {
+.vacation-tablink[href="#tab7"]::before {
     content: none;
 }
 .vacation-tablink.active {
@@ -488,7 +488,7 @@ NAV {
     margin: 0 auto;
  }
 .tabcontent--text P {
-    font-size: 32px;
+    font-size: 22px;
     line-height: 40px;
     color: #ffffff;
     font-weight: 300;
