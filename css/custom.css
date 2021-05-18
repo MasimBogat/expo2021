@@ -174,7 +174,7 @@ NAV {
 }
 .section#banner H1 {
     font-size: 90px;
-    line-height: 95px;
+    line-height: 85px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 46px;
@@ -194,7 +194,7 @@ NAV {
 .about--intro {
     font-size: 28px;
     line-height: 33px;
-    text-align: left;
+    text-align: center;
 }
 .about--content {
     margin-top: 46px;
@@ -685,12 +685,16 @@ FOOTER * {
     width: 100%;
     border-radius: 40px;
     padding: 38px 12px;
-    background: url(../images/background/1form.png), #fff;
+    background: url(../images/background/1form_2.png), #fff;
     background-repeat: no-repeat;
+    max-height: 90%;
+    overflow-y: auto;
 }
 .modalBody {
     max-width: 780px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 .modalHeader {
     font-size: 52px;
@@ -720,16 +724,16 @@ FOOTER * {
     color: #000;
     margin-bottom: 8px;
 }
-.form-group INPUT,.form-group TEXTAREA {
+.form-group INPUT,.form-group TEXTAREA, .form-group SELECT {
     font-size: 22px;
     line-height: 28px;
 }
-.form-group INPUT, .form-group TEXTAREA {
+.form-group INPUT, .form-group TEXTAREA, .form-group SELECT {
     border-radius: 20px;
     background-color: #ffffff;
     border: 2px solid #808080;
 }
-.form-group INPUT:focus, .form-group TEXTAREA:focus {
+.form-group INPUT:focus, .form-group TEXTAREA:focus, .form-group SELECT:focus {
     outline: none;
     box-shadow: none;
     border-color: #af8450;
@@ -771,6 +775,25 @@ FOOTER * {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+.selected-type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+.selected-type P {
+    font-weight: 500;
+    padding-right: 14px;
+    margin-bottom: 24px;
+}
+.in {
+    color: #000000;
+    text-shadow: 0px 0px 20px #4caf50, 0 0 20px #ff5722;
+}
+.not-in {
+    color: #b1b1b1;
+    text-shadow: 0 0 20px #000000;
 }
 @media (min-width: 576px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -1116,7 +1139,7 @@ FOOTER * {
         font-size: 18px;
         line-height: 24px;
     }
-    .form-group INPUT, .form-group TEXTAREA {
+    .form-group INPUT, .form-group TEXTAREA, .form-group SELECT {
         font-size: 18px;
         line-height: 24px;
     }
@@ -1189,6 +1212,11 @@ FOOTER * {
         transform: translateX(-50%);
     }
 }
+@media (max-width: 445px) {
+    .selected-type P {
+        width: 100%;
+    }
+}
 @media (max-width: 380px) {
     .offer--text .btn.gold {
         font-size: 22px;
@@ -1252,7 +1280,6 @@ FOOTER * {
         height: 100%;
         bottom: 0;
         left: 0;
-        opacity: 20%;
         background-image: url(../images/background/2_2.png);
         background-position-y: top;
         background-repeat: no-repeat;
@@ -1264,7 +1291,6 @@ FOOTER * {
         height: 100%;
         bottom: 0;
         right: 0;
-        opacity: 20%;
         background-image: url(../images/background/3_1.png);
         background-position-y: bottom;
         background-repeat: no-repeat;

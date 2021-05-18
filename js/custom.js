@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $('.expo--cardimage').each(function(){
-        console.log($(this).find('IMG'))
         $(this).css('background-image', 'url("' + $(this).find('IMG').attr('src') + '"');
     });
     $('.news.owl-carousel').owlCarousel({
@@ -63,6 +62,32 @@ $(document).ready(function () {
        e.preventDefault();
         $(btn).trigger('click');
     });
+
+    let typeSelect = $('#exampleInputType'),
+        thisInfochilds = $('.selected-type P');
+    typeSelect.on('change', function() {
+       let thisType = $(this).val(),
+           thisTypeOpt = $(this).find(':selected').attr('data-info');
+       if (thisType === "custom" && thisTypeOpt === undefined) {
+           thisInfochilds.each(function() {
+              $(this).removeClass('in').removeClass('not-in');
+           });
+           $('#exampleFormControlComment').prop("required", true);
+           $('.form-group.observable').addClass('required');
+       } else {
+           let thisTypeOptArray = thisTypeOpt.split(',');
+           thisInfochilds.each(function() {
+               $(this).removeClass('in').addClass('not-in');
+           });
+           for (let i = 0; i < thisTypeOptArray.length; i++) {
+               $('.selected-type P[data-order="' + thisTypeOptArray[i] + '"]').addClass('in').removeClass('not-in');
+           }
+           $('#exampleFormControlComment').prop("required", false);
+           $('.form-group.observable').removeClass('required');
+       }
+    });
+
+
 
     // Get the modal
     var modal = document.getElementById("myModal");
