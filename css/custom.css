@@ -1280,6 +1280,7 @@ FOOTER * {
         height: 100%;
         bottom: 0;
         left: 0;
+        opacity: 0.2;
         background-image: url(../images/background/2_2.png);
         background-position-y: top;
         background-repeat: no-repeat;
@@ -1291,6 +1292,7 @@ FOOTER * {
         height: 100%;
         bottom: 0;
         right: 0;
+        opacity: 0.2;
         background-image: url(../images/background/3_1.png);
         background-position-y: bottom;
         background-repeat: no-repeat;
