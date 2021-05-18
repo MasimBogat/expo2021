@@ -485,6 +485,7 @@ NAV {
     border-radius: 35px;
     display: block;
     max-height: 375px;
+    max-width: 600px;
     margin: 0 auto;
  }
 .tabcontent--text P {
