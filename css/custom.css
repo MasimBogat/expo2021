@@ -70,7 +70,7 @@ NAV {
     align-items: center;
 }
 .logo-wrap img.logo {
-    max-width: 200px;
+    max-width: 120px;
 }
 .main-nav {
     display: flex;
@@ -608,9 +608,20 @@ FOOTER * {
     margin-top: 60px;
 }
 .footer--logo IMG {
-    width: 100%;
+    width: 88%;
     height: auto;
     display: block;
+}
+.footer--resseler IMG{
+    max-width: 100%;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+.footer--address P {
+    font-size: 26px;
+    line-height: 30px;
+    margin-top: 15px;
+    margin-bottom: 12px;
 }
 .footer--logo P {
     margin-bottom: 0;
@@ -1024,7 +1035,7 @@ FOOTER * {
         margin-bottom: 16px;
     }
     .footer--logo IMG {
-        max-height: 100%;
+        max-height: 88%;
         width: auto;
         margin: 0 auto;
     }
@@ -1241,7 +1252,7 @@ FOOTER * {
         top: -20%;
     }
     .footer--logo IMG {
-        width: 100%;
+        width: 88%;
     }
 }
 
