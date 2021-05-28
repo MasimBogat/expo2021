@@ -162,6 +162,15 @@ NAV {
     left: 36px;
     z-index: 2;
 }
+.section#banner .logo-resseler {
+    max-width: 300px;
+    border-radius: 30px;
+    position: absolute;
+    float: right;
+    top: 36px;
+    right: 36px;
+    z-index: 2;
+}
 .section#banner::before {
     content: "";
     position: absolute;
@@ -611,11 +620,6 @@ FOOTER * {
     width: 88%;
     height: auto;
     display: block;
-}
-.footer--resseler IMG{
-    max-width: 100%;
-    margin-top: 50px;
-    border-radius: 30px;
 }
 .footer--address P {
     font-size: 26px;
@@ -1230,6 +1234,12 @@ FOOTER * {
         left: 50%;
         transform: translateX(-50%);
     }
+    .section#banner .logo-resseler {
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
 }
 @media (max-width: 445px) {
     .selected-type P {
