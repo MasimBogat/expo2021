@@ -51,7 +51,7 @@ H3.section--title {
 }
 /*HEADER*/
 HEADER {
-    padding: 15px 36px;
+    padding: 3px 36px;
     background: #fff;
     display: flex;
     position: sticky;
@@ -847,6 +847,10 @@ FOOTER * {
         right: 0;
         width: 570px;
     }
+    #offer .col-lg-3 { 
+        flex: 0 0 auto;
+        width: 20%;
+        }
 }
 @media (min-width: 1257px) {
     #about .after--img {
