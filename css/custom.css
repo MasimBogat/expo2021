@@ -1350,4 +1350,26 @@ FOOTER * {
         background-position-y: top;
         background-repeat: no-repeat;
     }
+    #expo-news::before {
+        content: "";
+        position: absolute;
+        width: 520px;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        background-image: url(../images/background/1_1.png);
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+    }
+    #media::after {
+        content: "";
+        position: absolute;
+        width: 520px;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        background-image: url(../images/background/1_2.png);
+        background-position-y: top;
+        background-repeat: no-repeat;
+    }
 /*BACKGROUNDS*/
