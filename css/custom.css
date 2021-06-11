@@ -1361,6 +1361,9 @@ FOOTER * {
         background-position-y: bottom;
         background-repeat: no-repeat;
     }
+    #expo-news .about--videowrapper {
+        min-height: 364px;
+        }
     #media::after {
         content: "";
         position: absolute;
