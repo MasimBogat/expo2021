@@ -1363,6 +1363,9 @@ FOOTER * {
     }
     #expo-news .about--videowrapper {
         min-height: 364px;
+    }
+    #expo-news .about--content {
+        justify-content: center;
         }
     #media::after {
         content: "";
