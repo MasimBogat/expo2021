@@ -1382,6 +1382,7 @@ FOOTER * {
         background-image: url(../images/background/1form_1.png);
         background-position-y: top;
         background-repeat: no-repeat;
+        z-index: -2;
     }
     #expo-page .about--videowrapper {
         min-height: 220px;
