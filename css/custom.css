@@ -5,6 +5,14 @@ BODY {
     line-height: 1em;
     color: #000;
 }
+.input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+.input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+.input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+.input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+.input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+.input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+.input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+.input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     width: 100%;
     padding-right: 12px;
@@ -770,6 +778,20 @@ FOOTER * {
     box-shadow: none;
     border-color: #af8450;
 }
+.form-group INPUT:focus::-webkit-input-placeholder, .form-group TEXTAREA:focus::-webkit-input-placeholder { 
+    color:transparent; 
+}
+.form-group INPUT:focus:-moz-placeholder, .form-group TEXTAREA:focus:-moz-placeholder {
+     color:transparent; 
+} /* FF 4-18 */
+.form-group INPUT:focus::-moz-placeholder, .form-group TEXTAREA:focus::-moz-placeholder {
+     color:transparent; 
+} /* FF 19+ */
+.form-group INPUT:focus:-ms-input-placeholder, .form-group TEXTAREA:focus:-ms-input-placeholder {
+     color:transparent; 
+    } /* IE 10+ */
+
+
 .form-group.required > LABEL::after {
     content: "*";
     margin-left: 4px;
@@ -1350,6 +1372,29 @@ FOOTER * {
         background-position-y: top;
         background-repeat: no-repeat;
     }
+    #expo-page::after {
+        content: "";
+        position: absolute;
+        width: 520px;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background-image: url(../images/background/1form_1.png);
+        background-position-y: top;
+        background-repeat: no-repeat;
+    }
+    #expo-page .about--videowrapper {
+        min-height: 220px;
+    }
+    #expo-page .d-flex-expo P {
+        padding: 10px;
+        font-size: 20px;
+        line-height: 33px;
+        text-align: left;
+    }
+    #expo-page .about--content {
+        justify-content: center;
+        }
     #expo-news::before {
         content: "";
         position: absolute;
