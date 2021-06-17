@@ -9,7 +9,7 @@ $_message = htmlspecialchars($_POST['message']);
 if ( $_POST['mailto'] ) {
 $to = $_POST['mailto'];
 } else { 
-$to = 'ak@belinterexpo.by';
+$to = 'mpbogatko@gmail.com';
 
 }
 
