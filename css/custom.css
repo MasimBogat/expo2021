@@ -78,7 +78,7 @@ NAV {
     align-items: center;
 }
 .logo-wrap img.logo {
-    max-height: 80px;
+    height: 80px;
 }
 .main-nav {
     display: flex;

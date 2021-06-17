@@ -9,13 +9,13 @@ $_message = htmlspecialchars($_POST['message']);
 if ( $_POST['mailto'] ) {
 $to = $_POST['mailto'];
 } else { 
-$to = 'gulfood@belinterexpo.by';
+$to = 'ak@belinterexpo.by';
 
 }
 
 $arResult['ok'] = "N";
 
-$subject = 'Форма обратной связи GulFood2021';
+$subject = 'Узнать подробности о туре';
 
 $message = '
 
@@ -23,7 +23,7 @@ $message = '
 
     <head>
 
-      <title>Форма обратной связи GulFood2021</title>
+      <title>Узнать подробности о туре</title>
 
     </head>
 
