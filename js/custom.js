@@ -88,13 +88,14 @@ $(document).ready(function () {
     });
 
         /*form sumbit*/
-        let myFrom = $('#sf');
+        let myFrom = $('#contactform');
         myFrom.on('submit', function(e) {
             e.preventDefault();
             let formData = new FormData();
-            formData.append("name", $('input[name="t_name"]').val());
-            formData.append("phone", $('input[name="t_phone"]').val());
-            formData.append("message", $('input[name="t_message"]').val());
+            formData.append("name", $('input[name="userName"]').val());
+            formData.append("phone", $('input[name="userPhone"]').val());
+            formData.append("mail",$('input[name="userMail"]').val());
+            formData.append("message", $('input[name="userComment"]').val());
             $.ajax({
                 url: "./form.php",
                 type: "POST",
@@ -105,10 +106,10 @@ $(document).ready(function () {
                 data: formData,
                 success: function (data) {
                     if (data.ok == "Y") {
-                        $("#sf")[0].reset();
+                        $("#contactform")[0].reset();
                         $("#result").css("display", "block");
                         $("#result").addClass("success");
-                        if ($("#sf").hasClass("en")) {
+                        if ($("#contactform").hasClass("en")) {
                             $("#result").text("Your mail has been sent for our managers!");
                         } else {
                             $("#result").text("Ваше письмо было отправлено нашим менеджерам!");
@@ -119,7 +120,7 @@ $(document).ready(function () {
                     } else {
                         $("#result").css("display", "block");
                         $("#result").addClass("warning");
-                        if ($("#sf").hasClass("en")) {
+                        if ($("#contactform").hasClass("en")) {
                             $("#result").text("An error has occurred! Please try again later.");
                         } else {
                             $("#result").text("Произошла ошибка! Пожалуйста, повторите попытку позже.");
