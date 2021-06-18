@@ -87,7 +87,56 @@ $(document).ready(function () {
        }
     });
 
-
+        /*form sumbit*/
+        let myFrom = $('#contactform');
+        myFrom.on('submit', function(e) {
+            e.preventDefault();
+            let formData = new FormData();
+            formData.append("name", $('input[name="userName"]').val());
+            formData.append("phone", $('input[name="userPhone"]').val());
+            formData.append("mail",$('input[name="userMail"]').val());
+            formData.append("message", $('input[name="userComment"]').val());
+            $.ajax({
+                url: "./form.php",
+                type: "POST",
+                dataType: "json",
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: formData,
+                success: function (data) {
+                    if (data.ok == "Y") {
+                        $("#contactform")[0].reset();
+                        $("#result").css("display", "block");
+                        $("#result").addClass("success");
+                        if ($("#contactform").hasClass("en")) {
+                            $("#result").text("Your mail has been sent for our managers!");
+                        } else {
+                            $("#result").text("Ваше письмо было отправлено нашим менеджерам!");
+                        }
+                        setTimeout(function () {
+                            $("#result").hide();
+                        }, 3000);
+                    } else {
+                        $("#result").css("display", "block");
+                        $("#result").addClass("warning");
+                        if ($("#contactform").hasClass("en")) {
+                            $("#result").text("An error has occurred! Please try again later.");
+                        } else {
+                            $("#result").text("Произошла ошибка! Пожалуйста, повторите попытку позже.");
+                        }
+                        setTimeout(function () {
+                            $("#result").hide();
+                        }, 3000);
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                },
+            });
+            // Prevents default submission of the form after clicking on the submit button.
+            return false;
+        });
 
     // Get the modal
     var modal = document.getElementById("myModal");

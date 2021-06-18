@@ -4,14 +4,11 @@ $_name = htmlspecialchars($_POST['name']);
 
 $_phone = htmlspecialchars($_POST['phone']);
 
+$_email = htmlspecialchars($_POST['email']);
+
 $_message = htmlspecialchars($_POST['message']);
 
-if ( $_POST['mailto'] ) {
-$to = $_POST['mailto'];
-} else { 
-$to = 'ak@belinterexpo.by';
-
-}
+$to = 'mpbogatko@gmail.com';
 
 $arResult['ok'] = "N";
 
@@ -42,6 +39,12 @@ $message = '
      <th>Телефон/Phone</th><td>'.$_phone.'</td>
 
     </tr>
+
+    <tr>
+
+    <th>Электронная почта/Email</th><td>'.$_email.'</td>
+
+   </tr>
 
     <tr>
 
