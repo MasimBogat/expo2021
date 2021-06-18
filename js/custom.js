@@ -95,7 +95,7 @@ $(document).ready(function () {
             formData.append("name", $('input[name="userName"]').val());
             formData.append("phone", $('input[name="userPhone"]').val());
             formData.append("mail",$('input[name="userMail"]').val());
-            formData.append("message", $('input[name="userComment"]').val());
+            formData.append("message", $('textarea[name="userComment"]').val());
             $.ajax({
                 url: "./form.php",
                 type: "POST",

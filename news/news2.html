@@ -10,6 +10,30 @@
     <link href="../css/custom.css" rel="stylesheet">
     <link href="../css/fonts.css" rel="stylesheet">
     <link href="../css/owl.min.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W4NHHNPTE6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W4NHHNPTE6');
+    </script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(81123088, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/81123088" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <header>
@@ -56,7 +80,7 @@
     </header>
     <section class="section" id="expo-news">
         <div class="container">
-            <h3 class="section--title">Главный павильон выставки EXPO 2020 открывается для посетителей</h3>
+            <h2 class="section--title">Главный павильон выставки EXPO 2020 открывается для посетителей</h2>
             <p class="about--intro">
                 С 22 января 2021 года в Дубае открыт для посещения главный павильон «ЭКСПО-2020» под название Terra. Он расположен в районе «Устойчивое развитие» выставочного комплекса.
             </p>
@@ -123,7 +147,7 @@
     </section>
     <section class="section" id="news">
         <div class="container">
-            <h3 class="section--title">Другие новости EXPO 2020</h3>
+            <h2 class="section--title">Другие новости EXPO 2020</h2>
             <div class="news owl-carousel">
                 <div class="news--item">
                     <div class="news--photo">
@@ -277,23 +301,34 @@
                     </p>
                     <form id="contactform">
                         <div class="form-group required">
-                            <label for="exampleInputName">Ваше имя</label>
-                            <input type="text" class="form-control" id="exampleInputName" placeholder="Введите ваше имя" name="userName" required>
+                            <!-- <label for="exampleInputName">Ваше имя</label> -->
+                            <input type="text" class="form-control" id="exampleInputName" placeholder="Имя" name="userName" required>
                         </div>
                         <div class="form-group required">
-                            <label for="exampleInputPhone">Ваш телефон</label>
-                            <input type="text" class="form-control" id="exampleInputPhone" placeholder="Введите ваш телефон" name="userPhone" required>
+                            <!-- <label for="exampleInputPhone">Ваш телефон</label> -->
+                            <input type="text" class="form-control" id="exampleInputPhone" placeholder="Телефон" name="userPhone" required>
                         </div>
                         <div class="form-group required">
-                            <label for="exampleInputPhone">Ваш Email</label>
-                            <input type="text" class="form-control" id="exampleInputPhone" placeholder="Введите ваш адрес электронной почты" name="userPhone" required>
+                            <!-- <label for="exampleInputPhone">Ваш Email</label> -->
+                            <input type="text" class="form-control" id="exampleInputPhone" placeholder="Адрес электронной почты" name="userMail" required>
                         </div>
                         <div class="form-group observable">
-                            <label for="exampleFormControlComment">Оставьте комментарий или задайте вопрос</label>
-                            <textarea class="form-control" id="exampleFormControlComment" name="userComment" rows="3"></textarea>
+                            <!-- <label for="exampleFormControlComment">Оставьте комментарий или задайте вопрос</label> -->
+                            <textarea class="form-control" id="exampleFormControlComment" placeholder="Вопрос или комментарий" name="userComment" rows="3" ></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Отправить</button>
                     </form>
+                </div>
+            </div>
+        </div>                    
+    </div>
+    <div id="info-banner">
+        <div class="modalContent">
+            <div class="modalContentInner">
+                <span class="close">&times;</span>
+                <div class="modalBody">
+                    <p class="modalSubtitle" id="result">
+                    </p>
                 </div>
             </div>
         </div>
