@@ -107,26 +107,27 @@ $(document).ready(function () {
                 success: function (data) {
                     if (data.ok == "Y") {
                         $("#contactform")[0].reset();
+                        $("#myModal").css("display", "none");
+                        $("#info-banner").css("display", "block");
                         $("#result").css("display", "block");
-                        $("#result").addClass("success");
                         if ($("#contactform").hasClass("en")) {
                             $("#result").text("Your mail has been sent for our managers!");
                         } else {
                             $("#result").text("Ваше письмо было отправлено нашим менеджерам!");
                         }
                         setTimeout(function () {
-                            $("#result").hide();
+                            $("#info-banner").hide();
                         }, 3000);
                     } else {
-                        $("#result").css("display", "block");
-                        $("#result").addClass("warning");
+                        $("#info-banner").css("display", "block");
+                        $("#info-banner").addClass("warning");
                         if ($("#contactform").hasClass("en")) {
                             $("#result").text("An error has occurred! Please try again later.");
                         } else {
                             $("#result").text("Произошла ошибка! Пожалуйста, повторите попытку позже.");
                         }
                         setTimeout(function () {
-                            $("#result").hide();
+                            $("#info-banner").hide();
                         }, 3000);
                     }
                 },
