@@ -4,11 +4,11 @@ $_name = htmlspecialchars($_POST['name']);
 
 $_phone = htmlspecialchars($_POST['phone']);
 
-$_email = htmlspecialchars($_POST['email']);
+$_email = htmlspecialchars($_POST['mail']);
 
 $_message = htmlspecialchars($_POST['message']);
 
-$to = 'mpbogatko@gmail.com';
+$to = 'ak@belinterexpo.by';
 
 $arResult['ok'] = "N";
 
@@ -26,7 +26,7 @@ $message = '
 
 <body>
 
-  <table style="width: 100%;">
+  <table style="width: 100%; text-align:left;">
 
     <tr>
 
@@ -64,6 +64,7 @@ $message = '
 
 $headers[] = 'MIME-Version: 1.0';
 $headers[] = 'Content-type: text/html; charset=UTF-8';
+$headers[] = "Bcc: tt@belinterexpo.by";
 
 
 
